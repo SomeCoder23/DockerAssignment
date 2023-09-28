@@ -15,10 +15,10 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Build Docker image
-        run: docker build . -t somecoder23/staticHTML-docker:${{ github.sha }}
+        run: docker build . -t somecoder23/ngnix-docker:${{ github.sha }}
 
       - name: Login to Docker Hub
         run: echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
 
       - name: Push Docker image
-        run: docker push somecoder23/staticHTML-docker:${{ github.sha }}
+        run: docker push somecoder23/ngnix-docker:${{ github.sha }}

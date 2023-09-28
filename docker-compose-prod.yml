@@ -1,6 +1,6 @@
 version: '3'
 services:
   web:
-    image: somecoder23/staticHTML-docker:latest
+    image: somecoder23/ngnix-docker:latest
     ports:
       - "80:80"
